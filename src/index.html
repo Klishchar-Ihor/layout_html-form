@@ -12,6 +12,165 @@
   </head>
   <body>
     <h1>HTML Form</h1>
+
+    <form action="" method="post">
+
+      <label class = "form-field">
+        E-mail:
+        <input
+          type="email"
+          name="Email"
+          placeholder="email@example.com"
+          required
+        >
+      </label>
+
+      <label class = "form-field">
+        Username:
+        <input
+          type="text"
+          name="Username"
+        >
+      </label>
+
+      <label class = "form-field">
+        Password:
+        <input
+          type="password"
+          name="password"
+          required
+          minlength="5"
+          maxlength="17"
+        >
+      </label>
+
+      <label class = "form-field">
+        <input
+          type="checkbox"
+          name="remember"
+          checked
+          required
+        >
+        Remember me.
+      </label>
+
+      <div class="selection-field">
+        Choose your sex:
+
+        <label>
+          <input type="radio" name="sex">
+          -man
+        </label>
+
+        <label>
+          <input type="radio" name="sex">
+          -woman
+        </label>
+      </div>
+
+      <div class="selection-field">
+        <label class = "form-field">
+          Please choose your favorite color:
+
+          <select name="color" required multiple class = "form-field">
+            <option value="" disabled selected>Choose a color</option>
+            <option value="#f00">Red</option>
+            <option value="#0f0">Green</option>
+            <option value="#00f">Blue</option>
+            <option value="#000">Black</option>
+            <option value="#ff0">Yellow</option>
+            <option value="#800">Purple</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="selection-field">
+        <label class = "form-field" for="age" >Enter your age (1-100):</label>
+
+          <input
+            class = "form-field"
+            type="number"
+            id="age"
+            name="age"
+            min="1"
+            max="100"
+            value="12"
+          >
+      </div>
+
+      <div class="selection-field">
+        <label for="start" class = "form-field">Start Date:</label>
+
+        <input
+          class = "form-field"
+          type="date"
+          id="start"
+          name="trip-start"
+          value="2023-04-07"
+          min="2023-04-01"
+          max="2023-12-31"
+        >
+      </div>
+
+      <div class="selection-field">
+        <label for="appt" class = "form-field">Enter the time of your registration:</label>
+
+        <input
+          class = "form-field"
+          type="time"
+          id="appt"
+          name="appt"
+          min="00:00"
+          max="23:59"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <p>Rate the form:</p>
+
+        <div>
+
+          <input
+            type="range"
+            id="rate"
+            name="rate"
+            min="0"
+            max="12"
+          >
+
+          <label for="rate">Rating</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p>Choose the colors of the flag of Ukraine:</p>
+
+        <div>
+          <input
+            type="color"
+            id="top"
+            name="top"
+            value="#005BBB"
+          >
+          <label for="top">Top color</label>
+        </div>
+
+        <div>
+          <input
+            type="color"
+            id="bottom"
+            name="bottom"
+            value="#FFD500"
+          >
+          <label for="bottom">Bottom color</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Sign in</button>
+
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
+
