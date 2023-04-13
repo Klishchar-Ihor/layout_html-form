@@ -12,83 +12,28 @@
   </head>
   <body>
     <h1>HTML Form</h1>
-
-    <form action="" method="post">
-
-      <label class = "form-field">
-        E-mail:
-        <input
-          type="email"
-          name="Email"
-          placeholder="email@example.com"
-          required
-        >
-      </label>
-
-      <label class = "form-field">
-        Username:
-        <input
-          type="text"
-          name="Username"
-        >
-      </label>
-
-      <label class = "form-field">
-        Password:
-        <input
-          type="password"
-          name="password"
-          required
-          minlength="5"
-          maxlength="17"
-        >
-      </label>
-
-      <label class = "form-field">
-        <input
-          type="checkbox"
-          name="remember"
-          checked
-          required
-        >
-        Remember me.
-      </label>
-
-      <div class="selection-field">
-        Choose your sex:
-
-        <label>
-          <input type="radio" name="sex">
-          -man
-        </label>
-
-        <label>
-          <input type="radio" name="sex">
-          -woman
-        </label>
-      </div>
-
-      <div class="selection-field">
-        <label class = "form-field">
-          Please choose your favorite color:
-
-          <select name="color" required multiple class = "form-field">
-            <option value="" disabled selected>Choose a color</option>
-            <option value="#f00">Red</option>
-            <option value="#0f0">Green</option>
-            <option value="#00f">Blue</option>
-            <option value="#000">Black</option>
-            <option value="#ff0">Yellow</option>
-            <option value="#800">Purple</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="selection-field">
-        <label class = "form-field" for="age" >Enter your age (1-100):</label>
-
+    <form action="" method="post" class="form-group">
+      <fieldset>
+        <legend>Personal information</legend>
+        <label class="form-field">
+          Surname:
           <input
-            class = "form-field"
+            type="text"
+            name="Surname"
+          >
+        </label>
+
+        <label class="form-field">
+          Name:
+          <input
+            type="text"
+            name="Name"
+          >
+        </label>
+
+        <label class="form-field" for="age">
+          How old are you?
+          <input
             type="number"
             id="age"
             name="age"
@@ -96,79 +41,144 @@
             max="100"
             value="12"
           >
-      </div>
+        </label>
 
-      <div class="selection-field">
-        <label for="start" class = "form-field">Start Date:</label>
-
-        <input
-          class = "form-field"
-          type="date"
-          id="start"
-          name="trip-start"
-          value="2023-04-07"
-          min="2023-04-01"
-          max="2023-12-31"
-        >
-      </div>
-
-      <div class="selection-field">
-        <label for="appt" class = "form-field">Enter the time of your registration:</label>
-
-        <input
-          class = "form-field"
-          type="time"
-          id="appt"
-          name="appt"
-          min="00:00"
-          max="23:59"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <p>Rate the form:</p>
-
-        <div>
-
+        <label class="form-field" for="start">
+          Full date of birth:
           <input
-            type="range"
-            id="rate"
-            name="rate"
-            min="0"
-            max="12"
+            type="date"
+            id="start"
+            name="birth-date"
+            min="2023-04-01"
+            max="2023-12-31"
           >
+        </label>
 
-          <label for="rate">Rating</label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <p>Choose the colors of the flag of Ukraine:</p>
-
-        <div>
+        <label class="form-field">
           <input
-            type="color"
-            id="top"
-            name="top"
-            value="#005BBB"
+            type="checkbox"
+            name="terms"
+            checked
+            required
           >
-          <label for="top">Top color</label>
+          I accept the term of the agreement
+        </label>
+      </fieldset>
+    </form>
+
+    <form action="" method="post" class="form-group">
+      <fieldset>
+        <legend>Registration</legend>
+        <label class="form-field">
+          E-mail:
+          <input
+            type="email"
+            name="Email"
+            placeholder="email@example.com"
+            required
+          >
+        </label>
+
+        <label class="form-field">
+          Password:
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="5"
+            maxlength="17"
+          >
+        </label>
+      </fieldset>
+    </form>
+
+    <form action="" method="post" class="form-group">
+      <fieldset>
+        <legend>An interesting fact about you!</legend>
+
+        Do you love cats?
+        <label class="form-field">
+          <input type="radio" name="pets">
+          Yes
+        </label>
+
+        <label class="form-field">
+          <input type="radio" name="pets">
+          No
+        </label>
+
+        <div class="form-field">
+          <label>
+            What is your favorite color?
+            <input
+              type="color"
+              id="top"
+              name="top"
+              value="#000000"
+            >
+          </label>
         </div>
 
-        <div>
-          <input
-            type="color"
-            id="bottom"
-            name="bottom"
-            value="#FFD500"
-          >
-          <label for="bottom">Bottom color</label>
+        <div class="form-field">
+          <label for="appt">
+            What time do you go to bed?
+            <input
+              type="time"
+              id="appt"
+              name="sleep-time"
+              min="00:00"
+              max="23:59"
+              required
+            >
+          </label>
         </div>
-      </div>
+
+        <div class="form-field">
+          <label>
+            What are your favorite brand of cars?
+            <select name="brand" required multiple class = "form-field">
+              <option value="" disabled selected>Choose a brand</option>
+              <option >BMW</option>
+              <option >Audi</option>
+              <option >Mercedes</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="form-field">
+          How do you rate our work?
+          <div>
+            <input
+              type="range"
+              id="rate"
+              name="rate"
+              min="0"
+              max="12"
+            >
+          </div>
+        </label>
+      </fieldset>
+    </form>
+
+    <form action="" method="post" class="form-group">
+      <fieldset>
+        <legend>Additional info:</legend>
+        <label class="form-field">
+          Comments:
+          <textarea name="feedback"></textarea>
+        </label>
+
+        <div class="form-field">
+          <label for="answer">Would you recomend us?</label>
+          <select id="answer" name="answer">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </fieldset>
 
       <button type="submit" class="btn">Sign in</button>
-
+      
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
