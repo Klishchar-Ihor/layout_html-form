@@ -112,38 +112,33 @@
           No
         </label>
 
-        <div class="form-field">
-          <label>
-            What is your favorite color?
-            <input
-              type="color"
-              id="top"
-              name="top"
-              value="#000000"
-            >
-          </label>
-        </div>
-
-        <div class="form-field">
-          <label for="appt">
-            What time do you go to bed?
-            <input
-              type="time"
-              id="appt"
-              name="sleep-time"
-              min="00:00"
-              max="23:59"
-              required
-            >
-          </label>
-        </div>
-
         <label class="form-field">
+          What is your favorite color?
+          <input
+            type="color"
+            id="top"
+            name="top"
+            value="#000000"
+          >
+        </label>
+
+        <label class="form-field" for="appt">
+          What time do you go to bed?
+          <input
+            type="time"
+            id="appt"
+            name="sleep-time"
+            min="00:00"
+            max="23:59"
+            required
+          >
+        </label>
+
+        <label class="form-field ">
           What are your favorite brand of cars?
           <select
             name="brand"
             required multiple
-            class = "form-field"
           >
           </option>
             <option >BMW</option>
@@ -153,16 +148,15 @@
         </label>
 
         <label>
-          <div>
-            How do you rate our work?
-            <input
-              type="range"
-              id="rate"
-              name="rate"
-              min="0"
-              max="12"
-            >
-          </div>
+          How do you rate our work?
+          <input
+            type="range"
+            id="rate"
+            name="rate"
+            min="0"
+            max="12"
+          >
+
         </label>
       </fieldset>
     </form>
@@ -179,13 +173,12 @@
           <textarea name="feedback"></textarea>
         </label>
 
-        <div >
-          <label for="answer">Would you recommend us?</label>
+        <label for="answer">Would you recommend us?
           <select id="answer" name="answer">
             <option value="yes">yes</option>
             <option value="no">no</option>
           </select>
-        </div>
+        </label>
       </fieldset>
 
       <button type="submit" class="btn">Submit</button>
